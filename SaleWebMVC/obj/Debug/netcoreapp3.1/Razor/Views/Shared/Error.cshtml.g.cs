@@ -22,8 +22,6 @@ using SaleWebMVC;
 #nullable restore
 #line 2 "C:\Users\Guilger\Documents\Cursos-Pratica\sales-web-mvc\SalesWebMVC\SaleWebMVC\Views\_ViewImports.cshtml"
 using SaleWebMVC.Models;
-using SaleWebMVC.Models.ViewModels;
-
 
 #line default
 #line hidden
