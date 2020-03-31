@@ -275,3 +275,4 @@ C:\Users\Guilger\Documents\Cursos-Pratica\sales-web-mvc\SalesWebMVC\SaleWebMVC\b
 C:\Users\Guilger\Documents\Cursos-Pratica\sales-web-mvc\SalesWebMVC\SaleWebMVC\bin\Debug\netcoreapp3.1\Pomelo.EntityFrameworkCore.MySql.dll
 C:\Users\Guilger\Documents\Cursos-Pratica\sales-web-mvc\SalesWebMVC\SaleWebMVC\bin\Debug\netcoreapp3.1\Pomelo.JsonObject.dll
 C:\Users\Guilger\Documents\Cursos-Pratica\sales-web-mvc\SalesWebMVC\SaleWebMVC\bin\Debug\netcoreapp3.1\libman.json
+C:\Users\Guilger\Documents\Cursos-Pratica\sales-web-mvc\SalesWebMVC\SaleWebMVC\obj\Debug\netcoreapp3.1\Razor\Views\Sellers\Index.cshtml.g.cs
