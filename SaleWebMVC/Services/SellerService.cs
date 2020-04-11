@@ -3,7 +3,7 @@ using SaleWebMVC.Models;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
-
+using SaleWebMVC.Services.Exceptions;
 
 namespace SaleWebMVC.Services
 {
@@ -40,6 +40,26 @@ namespace SaleWebMVC.Services
 
             _context.Add(obj);
             _context.SaveChanges();
+        }
+
+        public void Update(Seller obj)
+        {
+            if(!_context.Seller.Any(x =>  x.Id == obj.Id))
+            {
+                throw new NotFoundException("Id not found");
+            }
+
+            try
+            {
+                _context.Update(obj);
+                _context.SaveChanges();
+            }
+            catch (DbUpdateConcurrencyException e)
+            {
+                //relançando uma exceção do nivel de acesso a dados para a camada de serviço
+                //segregação de camadas
+                throw new DbConcurrencyException(e.Message);
+            }
         }
     }
 }
