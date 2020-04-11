@@ -1,30 +1,24 @@
 ﻿using SaleWebMVC.Data;
 using SaleWebMVC.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using System.Threading.Tasks;
 
 namespace SaleWebMVC.Services
 {
-    public class SellerService
+    public class DepartmentService
     {
         private readonly SaleWebMVCContext _context; //injeção de dependencia
 
-        public SellerService(SaleWebMVCContext context)
+        public DepartmentService(SaleWebMVCContext context)
         {
             _context = context;
         }
 
-        public List<Seller> FindAll()
+        public List<Department> FindAll()
         {
-            return _context.Seller.ToList();
-        }
-
-        public void Insert(Seller obj)
-        {
-
-            _context.Add(obj);
-            _context.SaveChanges();
+            return _context.Department.OrderBy(x => x.Name).ToList();
         }
     }
 }
